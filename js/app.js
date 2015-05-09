@@ -9,6 +9,22 @@ $(document).ready(function() {
   .mouseleave(function() {
     $('.ryu-ready').hide();
     $('.ryu-still').show();
+  })
+
+  .mousedown(function() {
+    console.log('mousedown');
+    $('.ryu-ready').hide();
+    $('.ryu-throwing').show();
+    $('.hadouken').show();
+    //play hadouken sound
+    //show and animate hadouken to end of screen
+  })
+
+  .mouseup(function() {
+    console.log('mouseup');
+    $('.ryu-throwing').hide();
+    $('.ryu-ready').show();
+    //Ryu goes back to ready position
   });
 
 });
