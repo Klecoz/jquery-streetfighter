@@ -13,9 +13,17 @@ $(document).ready(function() {
 
   .mousedown(function() {
     console.log('mousedown');
+    console.log(event);
     $('.ryu-ready').hide();
     $('.ryu-throwing').show();
-    $('.hadouken').show();
+    $('.hadouken').show().animate(
+      {'left': '1020px'} ,
+      500,
+      function() {
+        $(this).hide();
+        $(this).css('left', '610px');
+      }
+      );
     //play hadouken sound
     //show and animate hadouken to end of screen
   })
