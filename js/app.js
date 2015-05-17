@@ -46,7 +46,7 @@ $(document).ready(function() {
 
   $(document).keydown(function (e) {
     if ( e.keyCode === 88) {
-      //Plays Cool Music
+      //Checks if cool music is playing already so that it does not loop.
       if (musicCheck == 1){
       playCool();
     }
@@ -68,6 +68,8 @@ $(document).ready(function() {
       musicCheck = 1;
     }
   });
+
+  $('.text').fadeIn( 1900, function(){});
 
 
 

@@ -59,3 +59,11 @@ body {
   top: 170px;
   left: 610px;
 }
+
+.text {
+  position: absolute;
+  left: 800px;
+  bottom: 250px;
+  font-size: 3em;
+  display: none;
+}
