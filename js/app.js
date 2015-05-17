@@ -4,6 +4,9 @@
    // this function is strict..
 
 $(document).ready(function() {
+  //Plays Street Fighter Music on Load
+  //playStreet();
+  var musicCheck = 1;
   //mouseover .ryu div
   $('.ryu').mouseenter(function() {
     //hide .ryu-still GIF and show .ryu-ready GIF
@@ -43,17 +46,26 @@ $(document).ready(function() {
 
   $(document).keydown(function (e) {
     if ( e.keyCode === 88) {
+      //Plays Cool Music
+      if (musicCheck == 1){
+      playCool();
+    }
+
       console.log('keydown');
       $('.ryu-ready').hide();
       $('.ryu-cool').show();
+      musicCheck = 0;
     }
   })
 
   .keyup(function (e) {
     if (e.keyCode ===  88) {
       console.log('keyup');
+      $('#cool-sound')[0].pause();
+      $('#cool-sound')[0].load();
       $('.ryu-ready').show();
       $('.ryu-cool').hide();
+      musicCheck = 1;
     }
   });
 
