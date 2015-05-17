@@ -36,6 +36,24 @@ $(document).ready(function() {
     //Ryu goes back to ready position
   });
 
+  $(document).keydown(function (e) {
+    if ( e.keycode == 88) {
+      console.log('keydown');
+      $('.ryu-ready').hide();
+      $('.ryu-cool').show();
+    }
+  })
+
+  .keyup(function (e) {
+    if (e.keycode ==  88) {
+      console.log('keyup');
+      $('.ryu-ready').show();
+      $('.ryu-cool').hide();
+    }
+  });
+
+
+
 });
 
 function playHadouken () {
