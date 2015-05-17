@@ -1,3 +1,8 @@
+/*global $:false */
+(function () {
+   'use strict';
+   // this function is strict..
+
 $(document).ready(function() {
   //mouseover .ryu div
   $('.ryu').mouseenter(function() {
@@ -37,7 +42,7 @@ $(document).ready(function() {
   });
 
   $(document).keydown(function (e) {
-    if ( e.keycode == 88) {
+    if ( e.keyCode === 88) {
       console.log('keydown');
       $('.ryu-ready').hide();
       $('.ryu-cool').show();
@@ -45,7 +50,7 @@ $(document).ready(function() {
   })
 
   .keyup(function (e) {
-    if (e.keycode ==  88) {
+    if (e.keyCode ===  88) {
       console.log('keyup');
       $('.ryu-ready').show();
       $('.ryu-cool').hide();
@@ -56,8 +61,23 @@ $(document).ready(function() {
 
 });
 
+
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
 }
+
+function playCool () {
+  $('#cool-sound')[0].volume = 0.5;
+  $('#cool-sound')[0].load();
+  $('#cool-sound')[0].play();
+}
+
+function playStreet () {
+  $('#street-sound')[0].volume = 0.5;
+  $('#street-sound')[0].load();
+  $('#street-sound')[0].play();
+}
+
+}());
